@@ -16,8 +16,8 @@ For more visualization results, please check our [webpage](https://zhang-zx.gith
 > <sup>2</sup> Snap Inc.
 
 <div align="center">
-    <a><img src="assets/overview_finetuning.png"  height="300" ></a>
-    <a><img src="assets/overview_editing.png"  height="300" ></a>
+    <a><img src="assets/overview_finetuning.png"  width="500" ></a>
+    <a><img src="assets/overview_editing.png"  width="500" ></a>
 </div>
 
 ## Setup
@@ -56,12 +56,13 @@ We provide some of the fine-tuned models together with the corresonding inferenc
 IMG_PATH=path/to/image
 CLS_WRD='coarse class word'
 NAME='name of the experiment'
+
 python main.py \
 --base configs/stable-diffusion/v1-finetune_picture.yaml \
-    -t --actual_resume /path/to/pre-trained/model \
-    -n $NAME --gpus 0,  --logdir ./logs \
-    --data_root $IMG_PATH \
-    --reg_data_root $IMG_PATH --class_word $CLS_WRD 
+-t --actual_resume /path/to/pre-trained/model \
+-n $NAME --gpus 0,  --logdir ./logs \
+--data_root $IMG_PATH \
+--reg_data_root $IMG_PATH --class_word $CLS_WRD 
 ```
 
 ### Fine-tuning with patch-based training scheme
