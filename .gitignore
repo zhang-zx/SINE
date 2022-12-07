@@ -3,7 +3,7 @@
 .AppleDouble
 .LSOverride
 models
-models/
+# models/
 logs
 logs/
 datasets/
