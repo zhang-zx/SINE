@@ -58,11 +58,11 @@ CLS_WRD='coarse class word'
 NAME='name of the experiment'
 
 python main.py \
---base configs/stable-diffusion/v1-finetune_picture.yaml \
--t --actual_resume /path/to/pre-trained/model \
--n $NAME --gpus 0,  --logdir ./logs \
---data_root $IMG_PATH \
---reg_data_root $IMG_PATH --class_word $CLS_WRD 
+    --base configs/stable-diffusion/v1-finetune_picture.yaml \
+    -t --actual_resume /path/to/pre-trained/model \
+    -n $NAME --gpus 0,  --logdir ./logs \
+    --data_root $IMG_PATH \
+    --reg_data_root $IMG_PATH --class_word $CLS_WRD 
 ```
 
 ### Fine-tuning with patch-based training scheme
@@ -73,11 +73,11 @@ CLS_WRD='coarse class word'
 NAME='name of the experiment'
 
 python main.py \
---base configs/stable-diffusion/v1-finetune_patch_picture.yaml \
--t --actual_resume /path/to/pre-trained/model \
--n $NAME --gpus 0,   --logdir ./logs \
---data_root $IMG_PATH \
---reg_data_root $IMG_PATH --class_word $CLS_WRD  
+    --base configs/stable-diffusion/v1-finetune_patch_picture.yaml \
+    -t --actual_resume /path/to/pre-trained/model \
+    -n $NAME --gpus 0,   --logdir ./logs \
+    --data_root $IMG_PATH \
+    --reg_data_root $IMG_PATH --class_word $CLS_WRD  
 ```
 
 ## Model-based Image Editing
@@ -92,7 +92,8 @@ python scripts/stable_txt2img_guidance.py --ddim_eta 0.0 --n_iter 1 \
     --sin_ckpt $LOG_DIR"/checkpoints/last.ckpt" \
     --prompt "prompt for pre-trained model[SEP]prompt for fine-tuned model" \
     --cond_beta 0.4 --cond_beta_sin 0.6 \
-    --range_t_min 500 --range_t_max 1000 --single_guidance --skip_save --H 512 --W 512 --n_samples 2 \
+    --range_t_min 500 --range_t_max 1000 --single_guidance \
+    --skip_save --H 512 --W 512 --n_samples 2 \
     --outdir $LOG_DIR
 ```
 
@@ -102,10 +103,12 @@ python scripts/stable_txt2img_guidance.py --ddim_eta 0.0 --n_iter 1 \
 python scripts/stable_txt2img_multi_guidance.py --ddim_eta 0.0 --n_iter 2 \
     --scale 10 --ddim_steps 100 \
     --sin_ckpt path/to/ckpt1 path/to/ckpt2 \
-    --sin_config ./configs/stable-diffusion/v1-inference.yaml configs/stable-diffusion/v1-inference.yaml \
+    --sin_config ./configs/stable-diffusion/v1-inference.yaml \
+    configs/stable-diffusion/v1-inference.yaml \
     --prompt "prompt for pre-trained model[SEP]prompt for fine-tuned model1[SEP]prompt for fine-tuned model2" \
     --beta 0.4 0.5 \
-    --range_t_min 400 400 --range_t_max 1000 1000 --single_guidance --H 512 --W 512 --n_samples 2 \
+    --range_t_min 400 400 --range_t_max 1000 1000 --single_guidance \
+    --H 512 --W 512 --n_samples 2 \
     --outdir path/to/output_dir
 ```
 
