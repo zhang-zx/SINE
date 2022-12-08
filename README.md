@@ -1,6 +1,4 @@
-# SINE: SINgle Image Editing with Text-to-Image Diffusion Models
-
----
+## SINE <br><sub> <ins>SIN</ins>gle Image <ins>E</ins>diting with Text-to-Image Diffusion Models</sub>
 
 [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/zhang-zx/SINE/blob/master/SINE.ipynb)
 
