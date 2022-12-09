@@ -4,7 +4,7 @@
 
 
 [Project](https://zhang-zx.github.io/SINE/) |
-[ArXiv](https://to_be_added) 
+[ArXiv](https://arxiv.org/abs/2212.04489) 
 
 
 This respository contains the code for the paper [SINE: SINgle Image Editing with Text-to-Image Diffusion Models](https://arxiv.org/abs/to_be_added).
