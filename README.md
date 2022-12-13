@@ -131,10 +131,10 @@ In this code we refer to the following implementations: [Dreambooth-Stable-Diffu
 
 If our work or code helps you, please consider to cite our paper. Thank you!
 ```BibTeX
-@InProceedings{zhang2022sine,
-    author    = {Zhang, Zhixing and Han, Ligong and Ghosh, Arnab and Metaxas, Dimitris and Ren, Jian},
-    title     = {SINE: SINgle Image Editing with Text-to-Image Diffusion Models},
-    month     = {December},
-    year      = {2022},
+@article{zhang2022sine,
+  title={SINE: SINgle Image Editing with Text-to-Image Diffusion Models},
+  author={Zhang, Zhixing and Han, Ligong and Ghosh, Arnab and Metaxas, Dimitris and Ren, Jian},
+  journal={arXiv preprint arXiv:2212.04489},
+  year={2022}
 }
 ```
