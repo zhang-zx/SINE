@@ -33,6 +33,14 @@ git clone git@github.com:zhang-zx/SINE.git
 ```
 
 Then, install the dependencies following the [instructions](https://github.com/CompVis/stable-diffusion#stable-diffusion-v1).
+
+Instead, you can use following docker image.
+
+```bash
+docker pull sunggukcha/sine
+```
+
+
 To fine-tune the model, you need to download the [pre-trained model](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4-full-ema.ckpt).
 
 ### Data Preparation
@@ -95,7 +103,7 @@ python scripts/stable_txt2img_guidance.py --ddim_eta 0.0 --n_iter 1 \
     --sin_config configs/stable-diffusion/v1-inference.yaml \
     --sin_ckpt $LOG_DIR"/checkpoints/last.ckpt" \
     --prompt "prompt for pre-trained model[SEP]prompt for fine-tuned model" \
-    --cond_beta 0.4 --cond_beta_sin 0.6 \
+    --cond_beta 0.4 \
     --range_t_min 500 --range_t_max 1000 --single_guidance \
     --skip_save --H 512 --W 512 --n_samples 2 \
     --outdir $LOG_DIR
