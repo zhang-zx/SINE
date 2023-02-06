@@ -34,7 +34,7 @@ git clone git@github.com:zhang-zx/SINE.git
 
 Then, install the dependencies following the [instructions](https://github.com/CompVis/stable-diffusion#stable-diffusion-v1).
 
-Instead, you can use following docker image.
+Alternatively, you can also try to use the following docker image.
 
 ```bash
 docker pull sunggukcha/sine
