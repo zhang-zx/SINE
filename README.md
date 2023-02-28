@@ -7,7 +7,7 @@
 [ArXiv](https://arxiv.org/abs/2212.04489) 
 
 
-This respository contains the code for the paper [SINE: SINgle Image Editing with Text-to-Image Diffusion Models](https://arxiv.org/abs/2212.04489).
+This respository contains the code for the CVPR 2023 paper [SINE: SINgle Image Editing with Text-to-Image Diffusion Models](https://arxiv.org/abs/2212.04489).
 For more visualization results, please check our [webpage](https://zhang-zx.github.io/SINE/).
 
 > **[SINE: SINgle Image Editing with Text-to-Image Diffusion Models](https://zhang-zx.github.io/SINE/)** \
@@ -17,8 +17,8 @@ For more visualization results, please check our [webpage](https://zhang-zx.gith
 > [Dimitris Metaxas](https://people.cs.rutgers.edu/~dnm/) <sup>1</sup>,
 > and [Jian Ren](https://alanspike.github.io/) <sup>2</sup> \
 > <sup>1</sup> Rutgers University
-> <sup>2</sup> Snap Inc.
-
+> <sup>2</sup> Snap Inc.\
+> CVPR 2023.
 <div align="center">
     <a><img src="assets/overview_finetuning.png"  width="500" ></a>
     <a><img src="assets/overview_editing.png"  width="500" ></a>
