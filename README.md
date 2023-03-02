@@ -126,6 +126,9 @@ python scripts/stable_txt2img_multi_guidance.py --ddim_eta 0.0 --n_iter 2 \
 
 ## Diffusers library Example
 
+The Diffusers Library support is still under development.
+Results in our paper are obtained using previous code based on LDM.
+
 ### Training
 
 ```bash
