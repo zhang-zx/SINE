@@ -124,6 +124,43 @@ python scripts/stable_txt2img_multi_guidance.py --ddim_eta 0.0 --n_iter 2 \
     --outdir path/to/output_dir
 ```
 
+## Diffusers library Example
+
+### Training
+
+```bash
+export MODEL_NAME="CompVis/stable-diffusion-v1-4"
+export IMG_PATH="path/to/image"
+export OUTPUT_DIR="path/to/output_dir"
+
+accelerate launch iffusers_train.py  \
+  --pretrained_model_name_or_path=$MODEL_NAME  \
+  --train_text_encoder \
+  --img_path=$IMG_PATH \
+  --output_dir=$OUTPUT_DIR \
+  --instance_prompt="prompt for fine-tuning" \
+  --resolution=512 \
+  --train_batch_size=1 \
+  --gradient_accumulation_steps=1 \
+  --learning_rate=1e-6 \
+  --lr_scheduler="constant" \
+  --lr_warmup_steps=0 \
+  --max_train_steps=NUMBERS_OF_STEPS \
+  --checkpointing_steps=FREQUENCY_FOR_CHECKPOINTING \
+  --patch_based_training # OPTIONAL: add this flag for patch-based training scheme
+```
+
+### Sampling
+
+```bash
+
+python diffusers_sample1.py \
+--pretrained_model_name_or_path "path/to/output_dir" \
+--prompt "prompt for fine-tuned model" \
+--editing_prompt 'prompt for pre-trained model' 
+```
+
+
 ## Visualization Results
 
 Some of the editing results are shown below.
@@ -133,11 +170,14 @@ See more results on our [webpage](https://zhang-zx.github.io/SINE/).
 
 ## Acknowledgments
 
-In this code we refer to the following implementations: [Dreambooth-Stable-Diffusion](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion) and [stable-diffusion](https://github.com/CompVis/stable-diffusion#stable-diffusion-v1). Great thanks to them!
+In this code we refer to the following implementations: [Dreambooth-Stable-Diffusion](https://github.com/XavierXiao/Dreambooth-Stable-Diffusion) and [stable-diffusion](https://github.com/CompVis/stable-diffusion#stable-diffusion-v1).
+Implementation with the Diffusers Library support is highly based on [Dreambooth](https://github.com/huggingface/diffusers/tree/main/examples/dreambooth).
+Great thanks to them!
 
 ## Reference
 
 If our work or code helps you, please consider to cite our paper. Thank you!
+
 ```BibTeX
 @article{zhang2022sine,
   title={SINE: SINgle Image Editing with Text-to-Image Diffusion Models},

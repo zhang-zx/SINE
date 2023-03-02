@@ -6,6 +6,7 @@ models
 # models/
 logs
 logs/
+exps/
 datasets/
 src/
 # Icon must end with two \r
