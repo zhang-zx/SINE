@@ -136,7 +136,7 @@ export MODEL_NAME="CompVis/stable-diffusion-v1-4"
 export IMG_PATH="path/to/image"
 export OUTPUT_DIR="path/to/output_dir"
 
-accelerate launch iffusers_train.py  \
+accelerate launch diffusers_train.py  \
   --pretrained_model_name_or_path=$MODEL_NAME  \
   --train_text_encoder \
   --img_path=$IMG_PATH \
@@ -157,7 +157,7 @@ accelerate launch iffusers_train.py  \
 
 ```bash
 
-python diffusers_sample1.py \
+python diffusers_sample.py \
 --pretrained_model_name_or_path "path/to/output_dir" \
 --prompt "prompt for fine-tuned model" \
 --editing_prompt 'prompt for pre-trained model' 
