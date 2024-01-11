@@ -45,20 +45,7 @@ To fine-tune the model, you need to download the [pre-trained model](https://hug
 
 ### Data Preparation
 
-The data we use in the paper can be found from [here](https://drive.google.com/drive/folders/1oD2gwMkR25BvaXobuCrDyOn0_xI-dlmF?usp=sharing).
-
-### Pre-trained Models
-
-We provide some of the fine-tuned models together with the corresonding inference configuration files in the following:
-
-|Image | config | ckpt|
-|:---:|:---:|:---:|
-|[castle](https://drive.google.com/file/d/1HB1kQPs_zGToC2-toEUxA1MGgI025fy4/view?usp=share_link)| [patch-based config](./configs/stable-diffusion/v1-inference_patch.yaml) |[ckpt](https://drive.google.com/drive/folders/1yNmXyZ1v5gsLE6LpWqBL3mdl3TL053lh?usp=share_link)|
-|[castle](https://drive.google.com/file/d/1-nHalzFmgDd4ZYk29H_Qh8srZslRpqeA/view?usp=share_link)| [w/o patch-based config](./configs/stable-diffusion/v1-inference.yaml) |[ckpt](https://drive.google.com/drive/folders/1bcdBKZtcPJDhDD35gb9Xm90rVd21IQJJ?usp=share_link)|
-|[dog](https://drive.google.com/file/d/1JB4fYoZM3mYkDQmduJM7CPbiPFrrhLep/view?usp=share_link)| [patch-based config](./configs/stable-diffusion/v1-inference_patch.yaml) |[ckpt](https://drive.google.com/drive/folders/1YJ7BGo3F56U2LRzfYqPeJzXn8C_ULK-k?usp=share_link)|
-|[dog](https://drive.google.com/file/d/1JB4fYoZM3mYkDQmduJM7CPbiPFrrhLep/view?usp=share_link)| [w/o patch-based config](./configs/stable-diffusion/v1-inference.yaml) |[ckpt](https://drive.google.com/drive/folders/1UHVxbcF5Wnf6ilxVys8Sv8hsbN-4s1Y5?usp=share_link)|
-|[Girl with a peral earring](https://drive.google.com/file/d/1wiXBATzjdLCh727vmMhx9EMB6cAmOJhI/view?usp=share_link)|[patch-based config](./configs/stable-diffusion/v1-inference_patch_nearest_interp.yaml) |[ckpt](https://drive.google.com/drive/folders/1ynukjVh4K_5OOlAfHFsiqzAIiub8qmTi?usp=share_link)|
-|[Monalisa](https://drive.google.com/file/d/1DkFxhouR8jqvJcF9tE0fqCCquPpS5C1J/view?usp=share_link)|[patch-based config](./configs/stable-diffusion/v1-inference_patch_nearest_interp.yaml) |[ckpt](https://drive.google.com/drive/folders/1k6w-RHZVflwHKMovHYvOD_QsE2WzKHYv?usp=share_link)|
+The data we use in the paper can be found from [here](https://drive.google.com/drive/folders/1rGt5YTCwNgEag8MD_1wr9jrPpi1_8vfu?usp=sharing).
 
 ## Fine-tuning
 
